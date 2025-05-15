@@ -59,7 +59,7 @@ app.use(cookieParser());
 app.use(express.json());
 
 // Routes
-app.use("/api/test", testRoutes);
+app.use("/api", testRoutes);
 app.use("/api", router);
 app.use("/api/branch", protect.authMiddleware, branchRoutes);
 app.use("/api/branch", protect.authMiddleware, userRoutes);
