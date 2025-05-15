@@ -39,6 +39,7 @@ const NoticeRoutes = require("./routers/NoticeRoutes.js");
 const trashRoutes = require('./routers/trash.js');
 const galleryRoutes = require("./routers/galleryRoutes.js");
 const linkRoutes = require("./routers/linkRoutes.js");
+const testRoutes = require("./routers/test.js");
 
 // CORS configuration
 // CORS configuration
@@ -58,6 +59,7 @@ app.use(cookieParser());
 app.use(express.json());
 
 // Routes
+app.use("/api/test", testRoutes);
 app.use("/api", router);
 app.use("/api/branch", protect.authMiddleware, branchRoutes);
 app.use("/api/branch", protect.authMiddleware, userRoutes);
